@@ -1,0 +1,216 @@
+
+/////moduler programming: Modular programming is a software design approach that breaks a program into smaller, independent, reusable modules or components. Each module is responsible for a specific part of the program’s functionality and can be developed, tested, and maintained separately.
+Better code organization: Makes large programs more structured.
+Faster development: Multiple developers can work on different modules simultaneously.
+Easier debugging: Errors are isolated within modules.
+Improved testing: Modules can be tested individually.
+
+
+//////Compiler vs interpreter:
+Compiler: Translates the entire program into machine code at once before execution. It is faster in execution but takes more time for compilation. Examples: C, C++ (GCC, Clang).
+Interpreter: Translates and executes the code line by line, making it slower but easier for debugging. Examples: Python, JavaScript.
+Key Differences:
+A compiler processes the whole code at once, whereas an interpreter executes it step by step.
+Compilers generate an executable file, while interpreters do not.
+Compilers detect all errors after compilation, while interpreters stop at the first error.
+
+
+
+
+1. What is a Preprocessor?
+A preprocessor is a program that processes the source code before actual compilation. It handles tasks like including header files, macro expansion, and conditional compilation.
+////Preprocessor directives are commands that tell the preprocessor how to process the source code. They start with the # symbol and are executed before compilation.
+File Inclusion	        #include	Includes header files.
+Macro Definition	#define 	Defines constants or macros.
+compiler control derivatives  conditional compilation,,CAN ONN/OFF A LINE OR GROUP 
+ #ifdef  test for micro definition
+#endif  end of if
+
+////////Token: The smallest individual unit in a program.
+C programs: Written using 6 types of tokens.
+Keywords: Reserved words with special meaning, like int, char, if, while.
+Identifiers: Names used for variables, functions, etc., like marks, amount.
+Constants: Fixed values, such as 15, 0.26, -22.
+Strings: Sequences of characters, like "Hello", "Hai".
+Operators: Symbols that perform operations, such as +, *, ++, --.
+Special Symbols: Characters that have special meanings, like [], ().
+
+
+/////Identifiers Refers to the names of variables, functions and arrays
+
+
+/////Floating number representation
+A floating-point number is stored using three parts:
+1️⃣ Sign Bit (1 bit) → 0 for positive, 1 for negative.
+2️⃣ Exponent (8 bits for float, 11 bits for double) → Stored in biased form (+127 for float, +1023 for double).
+3️⃣ Mantissa (23 bits for float, 52 bits for double) → Stores the fraction (significant digits).
+Formula:
+Value=(−1)`Sign × 1.Mantissa × 2`(Exponent - Bias)
+Example (32-bit float for -5.75):
+Convert to binary: -5.75 → - (101.11)₂ → 1.0111 × 2²
+Sign = 1 (negative)
+Exponent = 129 (10000001 in binary)(127+2)
+Mantissa = 01110000000000000000000
+ans = 1 10000001 01110000000000000000000
+
+
+ Type  Size (bits)
+Char 8 
+Int 16
+Float  32 
+Double  64
+
+
+///////typedef (Type Definition) is a keyword in C and C++ that is used to create a new name (alias) for an existing data type
+typedef int dosomik;
+
+
+///storage class
+Global variables: can be used by all the functions in the program.
+Local variables: are visible and meaningful only inside the function in which they are declared.
+
+ Storage Class					Meaning
+auto      Local variables known only to the function in which it is declared.
+static    Local variable which exists and retains its value even after the    	  control is transferred to the calling function
+extern    Global variables known to all functions in the file.
+register  Local variables stored in the register.
+
+🔹 Use static for persistence, extern for global access, and register for speed. 🚀
+
+%10c  9spaceA
+%-10c A9space
+%010d 0000000008
+%15s evabe print korle minimum 15 ta jaiga habe,,,jodi A print kori tahole 14spaceAevabe print hobe
+%-15s   A14space
+%10.5s  "     abcd "
+%-10.5s  "abcd      "
+%e   exponent form
+
+//////operators
+arithmetic  +-*/%  /// precedence ++ -- * / % + -
+relational < > <= ++ !=
+logical && || !
+assignment =
+increment decrement
+conditional  x=(a>b)?a:b   (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+comma vvalue=(x=a,y=b,x+y);
+
+
+
+////implicit vs explicit
+implicit (automatic by compiler) bool>char>int> ll > float>double
+explicit (int)5/2.1
+
+
+/////akaaki
+start/stop ==capsule
+samantorik== input/output
+ayatokhetro== processing declare var etc statement
+ghuri == decision/if esle esob
+round == connector
+
+if else ladder  == if else if else if else
+
+////switch  must be int 
+marks =marks/10; 
+switch(marks){
+	case 10:
+	case 9:
+	case 8: printf ;break; break na korle porer statement gulao run korto	case 7:
+	defaul: kisu ekta: break: } (no match)	
+
+
+////counter controlled vs sentinel controlled
+count == fixed iteration
+sentinel = stops when condition met
+
+///string input  scanf("%[^\n]",arr);
+printf(“%10.4s”,ara)    "      aaa\n"
+puts(); print
+
+
+/////////str func
+strlen();
+strrev(str);
+strcmp(str1,str2) -1 mane str1 choto..
+strnmp(str1,str2,5); compares 1st 5 characters of string
+strcpy(); copy to first
+strcat(,);
+strstr(s1, s2)
+strstr searches for string s1 to see whether the string s2 is contained in 2.
+If yes, the function returns the position of the first occurence of the  sub-string.
+Otherwise it returns a NULL pointer.	
+
+
+///\\\\\\\\\\
+function Declaration: Declare a function that is to be used later. Also known as prototyping
+Function Definition: Independent program module where function logic is implemented
+
+
+
+///////CATEGORY OF FUNCTION
+**no arguments and no return values: void fc(){ printf()}
+
+**with arguments but no return values:
+
+**with arguments and one return value: 
+**with no arguments but return a value:  int fc(){ scan a return a;}
+
+**return multiple values : 
+void fc( int *a,int *b,int c){ *b=c*c; *a=c+c;}
+int main{ fc(&a,&b,c);}
+
+
+
+///////// scope visiblity and lifetime
+Scope → The part of the program where a variable is accessible.
+Visibility → Whether a variable can be accessed from different files/functions.
+Lifetime → How long a variable exists in memory during execution.
+
+
+
+ ///////Array  vs   Structure
+
+Collection of related data elements of same type  Can have elements of different data types
+It‘s a derived data type  It’s a programmer-defined one
+Behaves like built-in data types  Behaves like user-defined data types
+We only need to declare the variable before using them   We need to design and declare structures before they can be used
+
+//////structure vs union 
+A structure (struct) in C allocates memory separately for each of its members, allowing all members to hold values simultaneously, making it suitable for storing related data together. In contrast, a union (union) shares memory among all its members, using only enough space for the largest member, meaning only one member holds a valid value at a time, which helps save memory. Structures are ideal when multiple values are needed at once, while unions are useful when different values are stored one at a time to optimize memory usage.
+
+//pointer array
+perimeter must be pointer argument must be adress,,,call by ref
+
+ptr	Pointer to the first row
+ptr + i	Pointer to the i'th row
+*(ptr + i)	Pointer to the first element of the i'th row
+*(p + i) + j	Pointer to the j'th element of the i'th row
+*(*(p + i) + j)	Value stored in cell (i, j)
+
+
+/////call by value vs call by ref
+gpt
+
+
+/////Dynamic memory attocation
+gpt descriptio
+
+int k= (int*)malloc(size)     malloc(X*sizeof(datatype)); //allocate a single block of storage
+datatype k = (data type*)calloc(x,sizeof(datatype);   //multiple block but all sixe 0 at first
+datatype k = (datatype*)realloc(k,new_size); //new size
+free(pointer name);   //free the memory  
+must include stdlib.h
+
+/////types of error
+syntax  break of rules
+run-time   abided rules but error in runtime
+logical incorrect implementation of logic vZ if(x=y)
+
+
+
+
+
+
+
+
